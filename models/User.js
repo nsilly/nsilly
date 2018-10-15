@@ -1,6 +1,8 @@
 import Sequelize from 'sequelize';
 import sequelize from '../database/sequelize';
 
+export const PENDING_USER_STATUS = 1;
+
 const User = sequelize.define(
   'user',
   {

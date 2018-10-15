@@ -17,7 +17,7 @@ export default class MakeRouterCommand extends Command {
   }
 
   async handle(router, options) {
-    const file = path.resolve(__dirname, '../../../routes/api/v1', `${router}.js`);
+    const file = path.resolve(__dirname, '../../../', 'routes', `${router}.js`);
     if (fs.existsSync(file) && (options.override === undefined || options.override.toString() !== 'true')) {
       Error(`${router} already exist`);
     }
