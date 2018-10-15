@@ -1,7 +1,8 @@
 {
   "name": "nsilly",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "start": "ENV=production node ./bin/www",
     "dev": "./node_modules/.bin/nodemon ./node_modules/.bin/babel-node ./bin/www",
