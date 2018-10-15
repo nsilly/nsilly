@@ -1,0 +1,15 @@
+dist/**
+node_modules/**
+app/Data
+app/**/*.spec.js
+.circleci
+.ebextensions
+.ebextensions_not_executed
+.elasticbeanstalk
+.server
+.vscode
+database/**
+public/**
+test
+views/**
+
