@@ -3,6 +3,7 @@
 .env
 app/Configs/config.json
 .DS_Store
+.yarn
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/config.yml
@@ -14,3 +15,4 @@ app.test.js
 /logs/*
 !logs/testing.txt
 /.vscode
+yarn-error.log

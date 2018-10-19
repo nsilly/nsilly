@@ -16,26 +16,33 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@nsilly/auth@^2.1.4":
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/@nsilly/auth/-/auth-2.1.4.tgz#dfe7837123b14c9f7c053ee502fdcad9121e27d5"
+"@nsilly/auth@^2.1.5":
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/@nsilly/auth/-/auth-2.1.5.tgz#5c4e073352a56a29648d17a507f422d672608932"
   dependencies:
+    "@nsilly/container" "*"
     "@nsilly/exceptions" "*"
     "@nsilly/support" "*"
     jsonwebtoken "^8.3.0"
     lodash "*"
 
-"@nsilly/container@*", "@nsilly/container@^2.1.1":
+"@nsilly/container@*":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@nsilly/container/-/container-2.1.1.tgz#4b4c88281530cf4f6e4a1dbd4ff1bbf4316099e1"
+
+"@nsilly/container@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@nsilly/container/-/container-2.1.4.tgz#92a4d57c0f2719bc60830cfebb88211bdbf14110"
+  dependencies:
+    "@nsilly/exceptions" "*"
 
 "@nsilly/exceptions@*", "@nsilly/exceptions@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@nsilly/exceptions/-/exceptions-2.1.1.tgz#263015a71d0cc92532b6172d2dd06e0739c8ea6f"
 
-"@nsilly/log@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@nsilly/log/-/log-2.2.0.tgz#68955cf647ee24058f78afb690953953c4f95ecf"
+"@nsilly/log@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@nsilly/log/-/log-2.3.1.tgz#35c60c60561e6f7256b07c907e7435c665b1c184"
   dependencies:
     "@nsilly/container" "*"
     "@nsilly/support" "*"
@@ -43,9 +50,9 @@
     winston "^3.1.0"
     winston-elasticsearch "^0.7.4"
 
-"@nsilly/repository@^2.1.5":
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/@nsilly/repository/-/repository-2.1.5.tgz#eb647187ed4749544da15454672807f0abee24d5"
+"@nsilly/repository@^2.1.6":
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/@nsilly/repository/-/repository-2.1.6.tgz#5523605b92f746dba6b8c47f01436c1df6b20aa3"
   dependencies:
     "@nsilly/container" "*"
     "@nsilly/exceptions" "*"
