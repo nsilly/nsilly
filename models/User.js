@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize';
-import sequelize from '../database/sequelize';
+import sequelize from '../configs/sequelize';
 
 export const PENDING_USER_STATUS = 1;
 
