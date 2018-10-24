@@ -7,7 +7,7 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import AppRouter from './routes';
 import Providers from './app/Configs/Providers';
-import { adapters } from './app/Configs/Log';
+import adapters from './config/logging';
 import { Logger } from '@nsilly/log';
 import { ExceptionHandler, Exception } from '@nsilly/exceptions';
 import { App } from '@nsilly/container';
