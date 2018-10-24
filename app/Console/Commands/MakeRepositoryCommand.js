@@ -21,12 +21,12 @@ export default class MakeRepositoryCommand extends Command {
     if (fs.existsSync(file) && (options.override === undefined || options.override.toString() !== 'true')) {
       Error(`${repository} already exist`);
     }
-    const content = `import models from '../../models';
+    const content = `import User from '../Models/${options.model}';
     import { Repository } from './Repository';
     
     export default class ${repository} extends Repository {
       Models() {
-        return models.${options.model};
+        return ${options.model};
       }
     }
     
