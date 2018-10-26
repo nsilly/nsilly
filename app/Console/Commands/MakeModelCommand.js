@@ -2,7 +2,6 @@ import { Command, Error, Info } from './Command';
 import fse from 'fs-extra';
 import fs from 'fs';
 import path from 'path';
-import _ from 'lodash';
 
 export default class MakeModelCommand extends Command {
   signature() {
@@ -18,29 +17,30 @@ export default class MakeModelCommand extends Command {
   }
 
   async handle(model, options) {
-    const file = path.resolve(__dirname, '../../../models', `${model}.js`);
+    const file = path.resolve(__dirname, '../../../app/Models', `${model}.js`);
     if (fs.existsSync(file) && (options.override === undefined || options.override.toString() !== 'true')) {
       Error(`${model} already exist`);
     }
-    const content = `export default function(sequelize, DataTypes) {
-    const opt = {};
-    var ${model} = sequelize.define(
-    '${_.snakeCase(model)}',
-    {
+    const content = `import Sequelize from 'sequelize';
+    import sequelize from '../../config/sequelize';
+    
+    const ${path.basename(file, '.js')} = sequelize.define(
+      '${path.basename(file, '.js').toLowerCase()}',
+      {
         // column: {
-        //     type: DataTypes.STRING,
+        //     type: Sequelize.STRING,
         //     allowNull: false,
         //     defaultValue: ''
         // }
-    },
-    sequelize.stUtil.defaultOptions(opt, {
-        // freezeTableName: true,
-        underscored: true
-    })
+      },
+      {
+        underscored: true,
+        paranoid: false
+      }
     );
-    // ${model}.associate = models => {};
-    return ${model};
-}  
+    
+    export default ${path.basename(file, '.js')};
+      
 `;
     fse.outputFileSync(file, content);
     Info(`${file} is created`);
