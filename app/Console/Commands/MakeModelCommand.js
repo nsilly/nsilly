@@ -21,25 +21,28 @@ export default class MakeModelCommand extends Command {
     if (fs.existsSync(file) && (options.override === undefined || options.override.toString() !== 'true')) {
       Error(`${model} already exist`);
     }
+    const modelName = path.basename(file, '.js');
     const content = `import Sequelize from 'sequelize';
-    import sequelize from '../../config/sequelize';
-    
-    const ${path.basename(file, '.js')} = sequelize.define(
-      '${path.basename(file, '.js').toLowerCase()}',
-      {
-        // column: {
-        //     type: Sequelize.STRING,
-        //     allowNull: false,
-        //     defaultValue: ''
-        // }
-      },
-      {
-        underscored: true,
-        paranoid: false
-      }
-    );
-    
-    export default ${path.basename(file, '.js')};
+import sequelize from '../../config/sequelize';
+
+const ${modelName} = sequelize.define(
+  '${path.basename(file, '.js').toLowerCase()}',
+  {
+    // column: {
+    //     type: Sequelize.STRING,
+    //     allowNull: false,
+    //     defaultValue: ''
+    // }
+  },
+  {
+    underscored: true,
+    paranoid: false
+  }
+);
+
+// ${modelName}.associate = models => {};
+
+export default ${modelName};
       
 `;
     fse.outputFileSync(file, content);
