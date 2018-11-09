@@ -1,7 +1,7 @@
 import { Authenticate } from '@nsilly/auth';
 import { RequestParser, ServiceProvider } from '@nsilly/support';
 import { App } from '@nsilly/container';
-import User from '../Models/User';
+import Models from '../Models';
 
 export default class AppServiceProvider extends ServiceProvider {
   register() {
@@ -9,6 +9,6 @@ export default class AppServiceProvider extends ServiceProvider {
     App.singleton('Request', RequestParser);
   }
   boot() {
-    App.make('Auth').setModel(User);
+    App.make('Auth').setModel(Models);
   }
 }
