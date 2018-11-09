@@ -1,7 +1,7 @@
 dist/**
 node_modules/**
 app/Data
-app/**/*.spec.js
+**/*.spec.js
 .circleci
 .ebextensions
 .ebextensions_not_executed
