@@ -14,13 +14,13 @@
     "command": "./node_modules/.bin/babel-node command"
   },
   "dependencies": {
-    "@nsilly/auth": "^2.1.5",
-    "@nsilly/container": "^2.1.4",
+    "@nsilly/auth": "^3.0.0",
+    "@nsilly/container": "3.0.1",
     "@nsilly/exceptions": "^2.1.1",
-    "@nsilly/log": "^2.3.1",
-    "@nsilly/repository": "^2.1.6",
-    "@nsilly/response": "^2.1.3",
-    "@nsilly/support": "^2.1.3",
+    "@nsilly/log": "^3.0.0",
+    "@nsilly/repository": "3.0.0",
+    "@nsilly/response": "3.0.0",
+    "@nsilly/support": "3.0.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.18.2",
     "commander": "^2.15.1",
@@ -45,6 +45,7 @@
     "validator": "^9.4.1"
   },
   "devDependencies": {
+    "@babel/runtime": "^7.2.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
