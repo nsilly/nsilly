@@ -25,8 +25,8 @@ const User = sequelize.define(
   }
 );
 
-User.associate = models => {
-  User.hasMany(models.post);
-};
+// User.associate = models => {
+// User.hasMany(models.post);
+// };
 
 export default User;
