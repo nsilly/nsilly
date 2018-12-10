@@ -36,13 +36,13 @@
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@nsilly/container/-/container-2.1.1.tgz#4b4c88281530cf4f6e4a1dbd4ff1bbf4316099e1"
 
-"@nsilly/container@3.0.1":
+"@nsilly/container@^3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@nsilly/container/-/container-3.0.1.tgz#f231407a105c3d00a96f821af24b65ad458f6d0a"
   dependencies:
     "@nsilly/exceptions" "*"
 
-"@nsilly/exceptions@*", "@nsilly/exceptions@^2.1.1":
+"@nsilly/exceptions@*", "@nsilly/exceptions@^3.0.0":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@nsilly/exceptions/-/exceptions-2.1.1.tgz#263015a71d0cc92532b6172d2dd06e0739c8ea6f"
 
