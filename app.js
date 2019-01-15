@@ -1,8 +1,5 @@
 import express from 'express';
 import path from 'path';
-import morgan from 'morgan';
-import rfs from 'rotating-file-stream';
-import fs from 'fs';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import AppRouter from './routes';
@@ -11,7 +8,7 @@ import config from './config/app';
 import { Logger } from '@nsilly/log';
 import { ExceptionHandler, Exception } from '@nsilly/exceptions';
 import { App } from '@nsilly/container';
-import { RequestParser } from '@nsilly/support';
+import httpContext from 'express-http-context';
 
 require('dotenv').config();
 
@@ -23,6 +20,7 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(httpContext.middleware);
 
 /**
  * Register all service that declared in /app/Configs/Providers
@@ -37,25 +35,9 @@ config.providers.map(provider => {
 
 App.make(Logger).setAdapters(adapters);
 
-/**
- * log all requests to /storages/logs/access.log
- */
-if (process.env.APP_ENABLE_ACCESS_LOG === 'true') {
-  var logDirectory = path.join(__dirname, 'storages', 'logs');
-  fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
-  var accessLogStream = rfs('access.log', {
-    interval: '1d',
-    path: logDirectory
-  });
-  app.use(morgan('combined', { stream: accessLogStream }));
-}
-
 app.use(function(req, res, next) {
-  const reqd = App.make(RequestParser).createFromRequest(req, res, next);
-  reqd.add(req);
-  reqd.add(res);
-  reqd._req = req;
-  reqd.run(next);
+  httpContext.set('data', req);
+  next();
 });
 
 app.use(AppRouter);
