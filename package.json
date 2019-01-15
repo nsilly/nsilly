@@ -14,13 +14,14 @@
     "command": "./node_modules/.bin/babel-node command"
   },
   "dependencies": {
-    "@nsilly/auth": "^3.0.0",
-    "@nsilly/container": "^3.0.1",
-    "@nsilly/exceptions": "^3.0.0",
+    "@babel/runtime": "^7.2.0",
+    "@nsilly/auth": "^3.0.6",
+    "@nsilly/container": "^3.0.2",
+    "@nsilly/exceptions": "^3.0.3",
     "@nsilly/log": "^3.0.0",
-    "@nsilly/repository": "3.0.0",
-    "@nsilly/response": "3.0.0",
-    "@nsilly/support": "3.0.0",
+    "@nsilly/repository": "^3.0.0",
+    "@nsilly/response": "^3.0.0",
+    "@nsilly/support": "^4.0.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.18.2",
     "commander": "^2.15.1",
@@ -30,10 +31,10 @@
     "express": "~4.15.5",
     "fs-extra": "^5.0.0",
     "hbs": "~4.0.1",
-    "jsonwebtoken": "^8.1.0",
     "lodash": "^4.17.4",
     "moment": "^2.20.1",
     "mysql2": "^1.5.1",
+    "passport": "^0.4.0",
     "pg": "^7.4.1",
     "redis": "^2.8.0",
     "rimraf": "^2.6.2",
@@ -43,7 +44,6 @@
     "validator": "^9.4.1"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.2.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
@@ -64,6 +64,7 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^22.1.1",
-    "nodemon": "^1.12.5"
+    "nodemon": "^1.12.5",
+    "passport-jwt": "^4.0.0"
   }
 }

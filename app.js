@@ -1,6 +1,5 @@
 import app from './bootstrap/app';
 import routes from './routes';
-require('dotenv').config();
 
 app.use(routes);
 

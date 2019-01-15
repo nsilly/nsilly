@@ -7,6 +7,8 @@ import { App } from '@nsilly/container';
 import { ExceptionHandler } from '@nsilly/exceptions';
 import config from '../config/app';
 
+require('dotenv').config();
+
 const app = express();
 
 app.use(bodyParser.json({ limit: '50mb' }));
