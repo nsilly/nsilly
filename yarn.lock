@@ -166,13 +166,14 @@
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
-"@nsilly/auth@^3.0.6":
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/@nsilly/auth/-/auth-3.0.6.tgz#66c5d594868b676d15f6b78363eac3d3511aa8a3"
+"@nsilly/auth@^2.1.8":
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/@nsilly/auth/-/auth-2.1.8.tgz#52cd0b36b2bb2e35b956d0578a80d2da22c2ac63"
   dependencies:
     "@nsilly/container" "*"
     "@nsilly/exceptions" "*"
     "@nsilly/support" "*"
+    express-http-context "^1.2.0"
     lodash "*"
     passport "^0.4.0"
     passport-http-bearer "^1.0.1"
