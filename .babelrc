@@ -1,4 +1,5 @@
 {
-  "presets": ["env"],
-  "plugins": ["transform-runtime", "transform-object-rest-spread", ["babel-plugin-transform-builtin-extend", { "globals": ["Error", "Array"] }]]
+  "presets": [["@babel/preset-env"]],
+  "plugins": ["@babel/plugin-transform-runtime", "@babel/plugin-proposal-object-rest-spread", ["babel-plugin-transform-builtin-extend", { "globals": ["Error", "Array"] }]],
+  "ignore": ["node_modules"]
 }

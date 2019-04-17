@@ -3,11 +3,6 @@
 .env
 .DS_Store
 .yarn
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/config.yml
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
 app.test.js
 /dist
 /public/uploads
@@ -15,3 +10,4 @@ app.test.js
 !logs/testing.txt
 /.vscode
 yarn-error.log
+yarn.lock
