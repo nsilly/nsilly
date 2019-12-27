@@ -24,7 +24,7 @@ if (cluster.isMaster && process.env.MULTI_THREAD === 'true') {
   } else {
     var app = require('../app');
   }
-  var debug = require('debug')('styletribute:server');
+  var debug = require('debug')('nsilly:server');
   var http = require('http');
 
   /**
